@@ -14,7 +14,7 @@ app.use(express.json());
 const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
 const API_KEY = process.env.GEMINI_API_KEY;
 
-app.post("/api/gemini", async (req, res) => {
+app.post("/chat", async (req, res) => {
   try {
     const response = await fetch(`${GEMINI_API_URL}?key=${API_KEY}`, {
       method: "POST",
